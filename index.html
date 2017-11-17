@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dubstep Hangman</title>
+
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+<body>
+
+	<!-- Pseudo-Code:
+
+	1. Draw the design of the page.
+	2. Game starts as soon as user pushes a key.
+	3. When user guesses, letter is either a good or bad guess.
+	4. on a wrong guess
+		-show the letter in incorrect guesses area.
+		-reduce amount of guesses by one.
+		-don't allow user to guess that letter again
+		-if user runs out of guesses, say game over and ask if they want to play again.
+		-reset all guesses, number of guesses remaining
+	5. on a good guess
+		-have the underscore(s) replaced by the letter guessed
+		-don't allow user to guess that letter again
+		-if no more missing letters, add +1 to wins, ask if they want to play again, play a song
+		-reset all guesses, number of guesses remaining
+	6. bonus: add a sound to a correct guess (or a wrong guess too) -->
+
+	<header>
+		<h1>Welcome to Dubstep Hangman</h1>
+	</header>
+
+	<div id="result"></div>
+
+	<div class="content">
+		<div id="instruct">
+			Press Any Key to Get Started!
+		</div>
+		<div id="wins">
+			Wins: 0
+		</div>
+		<div class="currentWordText">
+			Current Word:
+			<br>
+			<div id="currentWord">
+				_ _ _ _ _
+			</div>
+		</div>
+		<div class="numberGuessesText">
+			Number of Guesses Remaining:
+			<br>
+			<div id="numberGuesses">
+				9
+			</div>
+		</div>
+		<div class="lettersGuessedText">
+			Letters Already Guessed:
+			<br>
+			<div id="lettersGuessed">
+			</div>
+		</div>
+	</div>
+
+	<script src="assets/javascript/game.js"></script>
+
+</body>
+</html>
