@@ -42,6 +42,10 @@ function gameResult() {
 		winsDiv.innerHTML = "Wins: " + wins;
 		playGame();
 	}
+	if (number == 0) {
+		resultDiv.innerHTML = "You lose.";
+		playGame();
+	}
 }
 
 document.onkeyup = function(event) {
